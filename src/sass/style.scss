@@ -68,7 +68,9 @@
     width: 1440px;
     margin: 0 auto;
 }
+@import "base/animations";
 
-@import "blocks/slider";
-@import "blocks/first";
+
 @import "blocks/nav";
+@import "blocks/promo";
+@import "blocks/slider";
