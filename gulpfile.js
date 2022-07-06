@@ -50,7 +50,7 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('fonts', function () {
-    return gulp.src("src/fonts/**/*")
+    return gulp.src("src/fonts/**/*.*")
         .pipe(gulp.dest("dist/fonts"))
         .pipe(browserSync.stream());
 });
