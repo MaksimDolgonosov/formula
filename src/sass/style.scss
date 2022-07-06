@@ -56,21 +56,31 @@
     font-style: normal;
 }
 
-
+@import "base/animations";
+@import "base/variables";
 
 * {
     font-family: 'SF UI Display', sans-serif;
     margin: 0;
     padding: 0;
+
 }
 
+body {
+    background-color: $main_color_dark;
+}
+p {
+    text-indent: 20px; /* Отступ первой строки в пикселах */
+   }
 .container {
     width: 1440px;
     margin: 0 auto;
+    background-color: white;
 }
-@import "base/animations";
+
 
 
 @import "blocks/nav";
 @import "blocks/promo";
-@import "blocks/slider";
+@import "blocks/about";
+// @import "blocks/slider";

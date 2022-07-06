@@ -1,0 +1,55 @@
+.about {
+    &__title {
+        font-size: 30px;
+        font-weight: 600;
+        padding-top: 15px;
+        text-align: center;
+    }
+
+    &__line {
+        width: 80px;
+        height: 4px;
+        background-color: $main_color_dark;
+        margin: 0 auto;
+        border-radius: 30px;
+    }
+
+    &__wrapper {
+        padding: 25px 20px 0 20px;
+        display: flex;
+
+        &-text {
+            padding-right: 20px;
+            a {
+                color: $main_color;
+            }
+        }
+        &-slider {
+            width: 640px;
+            position: relative;
+            .tns-nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                right: 50%;
+                transform: translateX(50%);
+                bottom: 10px;
+        
+                button {
+                    width: 25px;
+                    height: 3px;
+                    margin-right: 5px;
+                    border: none;
+                    background-color: azure;
+                }
+        
+                .tns-nav-active {
+                    background-color: black;
+                }
+            }
+        }
+
+    }
+
+}

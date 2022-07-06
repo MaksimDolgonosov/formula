@@ -9,5 +9,5 @@ let slider = tns({
     autoplayButtonOutput: false,
     speed: 900,
     navPosition: "bottom",
-    animateIn: "tns-fadeIn"
+    // animateIn: "tns-fadeIn"
 });
