@@ -28,7 +28,10 @@
         width: 504px;
         height: 404px;
         // border: 2px solid $main_color_dark;
-        font-size: 18px;
+        font-size: 17px;
         text-align: center;
+        a {
+            color: black;
+        }
     }
 }

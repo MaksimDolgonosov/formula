@@ -22,11 +22,32 @@
 
         .nav__item {
             a {
+                position: relative;
                 color: rgb(255, 255, 255);
+                text-decoration: none;
+                transition: 1s all;
+                // &:hover {
+                //     box-shadow: 5px 5px rgb(255, 255, 255);
+                // }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 0%;
+                    height: 1px;
+                    background-color: rgb(255, 255, 255);
+                    transition: 1s all;
+                }
 
                 &:hover {
-                    text-decoration: none;
+                    &::after {
+                        width: 100%;
+                    }
                 }
+
+
             }
 
 
