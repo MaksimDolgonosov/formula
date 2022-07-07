@@ -1,0 +1,34 @@
+.contacts {
+    &__title {
+        font-size: 30px;
+        font-weight: 600;
+        padding-top: 35px;
+        text-align: center;
+    }
+
+    &__line {
+        width: 80px;
+        height: 4px;
+        background-color: $main_color_dark;
+        margin: 0 auto;
+        border-radius: 30px;
+    }
+    &__wrapper {
+        padding: 40px 20px 30px 20px;
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    &__map {
+        width: 504px;
+        height: 404px;
+        // border: 2px solid $main_color_dark;
+    }
+    &__descr {
+        width: 504px;
+        height: 404px;
+        // border: 2px solid $main_color_dark;
+        font-size: 18px;
+        text-align: center;
+    }
+}
