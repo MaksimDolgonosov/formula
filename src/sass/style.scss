@@ -69,11 +69,14 @@
 body {
     background-color: $main_color_dark;
 }
+
 p {
-    text-indent: 20px; /* Отступ первой строки в пикселах */
-   }
+    text-indent: 20px;
+    /* Отступ первой строки в пикселах */
+}
+
 .container {
-    width: 1440px;
+    width: 1140px;
     margin: 0 auto;
     background-color: white;
 }
@@ -83,4 +86,4 @@ p {
 @import "blocks/nav";
 @import "blocks/promo";
 @import "blocks/about";
-// @import "blocks/slider";
+@import "blocks/feedback";

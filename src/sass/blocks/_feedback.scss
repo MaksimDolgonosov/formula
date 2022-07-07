@@ -1,0 +1,41 @@
+.feedback {
+    &__title {
+        font-size: 30px;
+        font-weight: 600;
+        padding-top: 35px;
+        text-align: center;
+    }
+
+    &__line {
+        width: 80px;
+        height: 4px;
+        background-color: $main_color_dark;
+        margin: 0 auto;
+        border-radius: 30px;
+    }
+    &__items {
+        padding: 0px 40px 0 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__item {
+        margin-top: 50px;
+        min-height: 170px;
+        display: grid;
+        grid-template-columns: 170px 750px;
+        column-gap: 30px;
+    }
+    &__img {
+        align-self: center;
+    }
+    &__header {
+        font-weight: 400;
+    }
+    &__text {
+        padding-top: 20px;
+        font-size: 17px;
+    }
+}
