@@ -1,0 +1,39 @@
+.footer {
+    padding: 20px;
+    background-color: $second-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+
+    &__deliz {
+        width: 320px;
+        
+    }
+
+    &-circles {
+        width: 320px;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    &-text {
+        text-align: center;
+        font-size: 17px;
+        font-weight: 100;
+        padding-top: 10px;
+    }
+
+    &__powered {
+        padding-top: 1px;
+        width: 320px;
+        text-align: end;
+
+        img {
+            
+            width: 20px;
+        }
+    }
+}
