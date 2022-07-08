@@ -81,6 +81,9 @@ p {
     background-color: white;
 }
 
+.greentext {
+    color: $main_color_dark;
+}
 
 
 @import "blocks/nav";
@@ -89,3 +92,6 @@ p {
 @import "blocks/feedback";
 @import "blocks/contacts";
 @import "blocks/footer";
+
+
+@import "blocks/media";

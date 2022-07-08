@@ -13,21 +13,47 @@ let slider = tns({
 
 // Анимация "Отзывы"
 
-
-
-// let wow = new WOW(
-//     {
-//       boxClass: 'wow', // класс, скрывающий элемент до момента отображения на экране (по умолчанию, wow)
-//       animateClass: 'animated', // класс для анимации элемента (по умолчанию, animated)
-//       offset: 0, // расстояние в пикселях от нижнего края браузера до верхней границы элемента, необходимое для начала анимации (по умолчанию, 0)
-//       mobile:  true, // включение/отключение WOW.js на мобильных устройствах (по умолчанию, включено)
-//       live:  true, // поддержка асинхронно загруженных элементов (по умолчанию, включена)
-//       callback: function(box) {
-//         // функция срабатывает каждый раз при старте анимации
-//         // аргумент box — элемент, для которого была запущена анимация
-//       },
-//       scrollContainer: null // селектор прокручивающегося контейнера (опционально, по умолчанию, window)
-//     }
-//   );
-
 new WOW().init();
+
+// Плавный скролл
+
+let links = document.querySelectorAll('[href^="#"]');
+let speed = 0.2;
+// console.log(links);
+links.forEach(link => {
+    if (link.getAttribute("href") != "#") {
+
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            let widthTop = document.documentElement.scrollTop,
+                hash = this.hash,
+                toBlock = document.querySelector(hash).getBoundingClientRect().top, // метод, позволяющий получить количество пикселей до элемента(его верхней границы)
+                start = null;
+
+            requestAnimationFrame(step);
+
+            function step(time) { //time - время, прошедшее с момента начала загрузки страницы в милисекундах. Это callback функция requestAnimationFrame
+
+                if (start === null) {
+                    start = time;
+                }
+
+                let progress = time - start;
+
+                let r = (toBlock < 0 ? Math.max(widthTop - progress / speed, widthTop + toBlock) : Math.min(widthTop + progress / speed, widthTop + toBlock));
+
+                document.documentElement.scrollTo(0, r);
+
+                if (r != widthTop + toBlock) {
+                    requestAnimationFrame(step);
+                } else {
+                    location.hash = hash;
+                }
+            }
+
+        });
+    }
+});
+
+

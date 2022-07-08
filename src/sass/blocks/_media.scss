@@ -1,0 +1,173 @@
+@media(max-width: 1439px) {}
+
+@media(max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .about__wrapper-slider {
+        width: 440px;
+    }
+
+    .feedback {
+        &__item {
+            grid-template-columns: 170px 650px;
+        }
+    }
+}
+
+@media(max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .nav__item {
+        a {
+            font-size: 17px;
+        }
+    }
+
+    .promo {
+        &__card {
+            width: 300px;
+
+            &-circles {
+                width: 200px;
+                top: 100px;
+            }
+
+            &-text {
+                display: none;
+            }
+        }
+    }
+
+    .about {
+        &__wrapper {
+            display: block;
+
+            &-slider {
+                margin: 0 auto;
+                width: 640px;
+            }
+        }
+    }
+
+    .feedback {
+        &__item {
+            grid-template-columns: 170px 450px;
+        }
+    }
+
+    .contacts {
+        &__wrapper {
+            display: block;
+        }
+
+        &__map {
+            margin: 0 auto;
+        }
+
+        &__descr {
+            margin: 0 auto;
+            min-height: 204px;
+            padding-top: 20px;
+        }
+    }
+
+    .footer {
+        &__deliz {
+            width: 250px;
+        }
+
+        &-circles {
+            width: 250px;
+        }
+
+        &__powered {
+            width: 250px;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .nav {
+        &__wrapper {
+            height: 50px;
+        }
+
+
+
+        .nav__items {
+            height: 50px;
+
+            img {
+                display: none;
+
+            }
+
+            a {
+                font-size: 15px;
+                line-height: 50px;
+            }
+        }
+    }
+
+    .promo {
+        &__card {
+            width: 250px;
+
+            &-circles {
+                width: 200px;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 60%;
+
+                svg {
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+
+            &-text {
+                display: none;
+            }
+        }
+    }
+
+    .about {
+        &__title {
+            font-size: 20px;
+        }
+
+        &__wrapper {
+            min-height: 600px;
+            &-text {
+                
+                padding-right: 0px;
+                font-size: 16px;
+            }
+
+            &-slider {
+                width: 400px;
+                height: 200px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+}

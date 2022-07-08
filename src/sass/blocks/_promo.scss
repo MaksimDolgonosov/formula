@@ -31,6 +31,15 @@
 
             top: 130px;
             left: 50px;
+
+            svg {
+                transition: .5s all;
+
+                &:hover {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
         }
 
 
@@ -42,7 +51,7 @@
             top: 185px;
             left: 50%;
             transform: translateX(-50%);
-            
+
         }
     }
 }
