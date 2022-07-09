@@ -66,4 +66,5 @@ window.addEventListener("DOMContentLoaded", () => {
         burger.classList.toggle("nav__hamburger_active");
         navMob.classList.toggle("nav__items__mob_active");
     });
+    
 });

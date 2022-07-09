@@ -7,17 +7,26 @@
     color: white;
     font-size: 12px;
     box-shadow: 0 -10px 5px rgb(59, 59, 59);
+
     &__deliz {
         width: 320px;
-        
+
+    }
+
+    &__social {
+        width: 320px;
     }
 
     &-circles {
-        width: 320px;
+        width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        
+
         svg {
             transition: .5s all;
+
             &:hover {
                 width: 60px;
                 height: 60px;
@@ -39,7 +48,7 @@
         text-align: end;
 
         img {
-            
+
             width: 20px;
         }
     }

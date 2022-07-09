@@ -82,7 +82,7 @@
             width: 250px;
         }
 
-        &-circles {
+        &__social {
             width: 250px;
         }
 
@@ -198,7 +198,7 @@
             width: 200px;
         }
 
-        &-circles {
+        &__social {
             width: 200px;
         }
 
@@ -316,13 +316,15 @@
         min-height: 85vh;
 
     }
+
     .about {
         &__title {
-            font-size: 20px;
+            font-size: 25px;
         }
 
         &__wrapper {
-            min-height: 800px;
+            padding: 20px 0 0 0;
+            min-height: 750px;
 
             &-text {
 
@@ -331,8 +333,8 @@
             }
 
             &-slider {
-                width: 315px;
-                
+                width: 100%;
+
 
                 .tns-nav {
                     bottom: 10px;
@@ -346,10 +348,202 @@
             }
         }
     }
-    // .about__wrapper-slider {
-    //     width: 315px;
-    // }
-    
+
+    .feedback {
+        &__title {
+            font-size: 25px;
+
+            padding-top: 20px;
+
+        }
+
+        &__items {
+            padding: 0px 0px 0px 0px;
+        }
+
+        &__item {
+            margin-top: 40px;
+            min-height: 170px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+    }
+
+    .contacts {
+        &__title {
+            font-size: 25px;
+
+        }
+
+        &__wrapper {
+            padding: 20px 0 20px 0;
+
+        }
+
+        &__descr {
+            width: 100%;
+            min-height: 204px;
+
+        }
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__deliz {
+            margin-top: 15px;
+            width: 100%;
+            order: 2;
+            text-align: center;
+        }
+
+        &__social {
+            width: 100%;
+        }
+
+        &-circles {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
 
 
+            order: 1;
+
+            svg {
+                transition: .5s all;
+
+                &:hover {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+
+        }
+
+        &-text {
+            display: none;
+        }
+
+        &__powered {
+            padding-top: 1px;
+            width: 100%;
+            text-align: end;
+            order: 3;
+            margin-top: 20px;
+
+            img {
+
+                width: 20px;
+            }
+        }
+    }
+
+
+}
+@media(max-width: 415px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .contacts {
+        &__map {
+            display: none;
+            &-iphone5{
+                display: none;
+            }
+            &-iphoneX{
+                display: none;
+            }
+            &-iphone12{
+                display: none;
+            }
+            &-iphonePlus {
+                width: 100%;
+                display: block;
+
+            }
+        }
+    }
+}
+@media(max-width: 391px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .contacts {
+        &__map {
+            display: none;
+            &-iphone5{
+                display: none;
+            }
+            &-iphonePlus{
+                display: none;
+            }
+            &-iphone12{
+                width: 100%;
+                display: block;
+            }
+            &-iphoneX {
+                display: none;
+
+            }
+        }
+    }
+}
+@media(max-width: 376px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .contacts {
+        &__map {
+            display: none;
+            &-iphone5{
+                display: none;
+            }
+            &-iphonePlus{
+                display: none;
+            }
+            &-iphone12{
+                display: none;
+            }
+            &-iphoneX {
+                width: 100%;
+                display: block;
+
+            }
+        }
+    }
+}
+@media(max-width: 321px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .contacts {
+        &__map {
+            display: none;
+            &-iphone5{
+                width: 100%;
+                display: block;
+            }
+            &-iphonePlus{
+                display: none;
+            }
+            &-iphone12{
+                display: none;
+            }
+            &-iphoneX {
+                display: none;
+
+            }
+        }
+    }
 }

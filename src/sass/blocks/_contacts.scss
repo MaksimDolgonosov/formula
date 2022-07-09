@@ -23,6 +23,18 @@
         width: 504px;
         height: 404px;
         // border: 2px solid $main_color_dark;
+        &-iphone5{
+            display: none;
+        }
+        &-iphoneX{
+            display: none;
+        }
+        &-iphone12{
+            display: none;
+        }
+        &-iphonePlus{
+            display: none;
+        }
     }
     &__descr {
         width: 504px;
