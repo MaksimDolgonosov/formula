@@ -90,6 +90,29 @@
             width: 250px;
         }
     }
+
+    .services {
+        &__items {
+            padding: 25px 10px 0 10px;
+        }
+
+        &__item {
+            width: 200px;
+
+        }
+
+        &__img {
+
+            width: 200px;
+            height: 200px;
+        }
+
+        &__text {
+
+            font-size: 18px;
+
+        }
+    }
 }
 
 @media(max-width: 768px) {
@@ -119,8 +142,11 @@
         }
 
         .nav__item {
-            display: none;
-            ;
+            &:nth-child(1) {
+                display: none;
+            }
+
+
         }
     }
 
@@ -204,6 +230,29 @@
 
         &__powered {
             width: 200px;
+        }
+    }
+
+    .services {
+        &__items {
+            padding: 25px 10px 0 10px;
+            flex-wrap: wrap;
+        }
+
+        &__item {
+            width: 300px;
+
+        }
+
+        &__img {
+            width: 300px;
+            height: 300px;
+        }
+
+        &__text {
+
+            font-size: 18px;
+
         }
     }
 
@@ -445,25 +494,37 @@
         }
     }
 
+    .services {
+        &__descr {
+            font-size: 18px;
+            padding: 30px 10px 0 10px;
+        }
+    }
 
 }
+
 @media(max-width: 415px) {
     .container {
         width: 100%;
         padding: 0 10px;
     }
+
     .contacts {
         &__map {
             display: none;
-            &-iphone5{
+
+            &-iphone5 {
                 display: none;
             }
-            &-iphoneX{
+
+            &-iphoneX {
                 display: none;
             }
-            &-iphone12{
+
+            &-iphone12 {
                 display: none;
             }
+
             &-iphonePlus {
                 width: 100%;
                 display: block;
@@ -472,24 +533,30 @@
         }
     }
 }
+
 @media(max-width: 391px) {
     .container {
         width: 100%;
         padding: 0 10px;
     }
+
     .contacts {
         &__map {
             display: none;
-            &-iphone5{
+
+            &-iphone5 {
                 display: none;
             }
-            &-iphonePlus{
+
+            &-iphonePlus {
                 display: none;
             }
-            &-iphone12{
+
+            &-iphone12 {
                 width: 100%;
                 display: block;
             }
+
             &-iphoneX {
                 display: none;
 
@@ -497,23 +564,29 @@
         }
     }
 }
+
 @media(max-width: 376px) {
     .container {
         width: 100%;
         padding: 0 10px;
     }
+
     .contacts {
         &__map {
             display: none;
-            &-iphone5{
+
+            &-iphone5 {
                 display: none;
             }
-            &-iphonePlus{
+
+            &-iphonePlus {
                 display: none;
             }
-            &-iphone12{
+
+            &-iphone12 {
                 display: none;
             }
+
             &-iphoneX {
                 width: 100%;
                 display: block;
@@ -522,24 +595,30 @@
         }
     }
 }
+
 @media(max-width: 321px) {
     .container {
         width: 100%;
         padding: 0 10px;
     }
+
     .contacts {
         &__map {
             display: none;
-            &-iphone5{
+
+            &-iphone5 {
                 width: 100%;
                 display: block;
             }
-            &-iphonePlus{
+
+            &-iphonePlus {
                 display: none;
             }
-            &-iphone12{
+
+            &-iphone12 {
                 display: none;
             }
+
             &-iphoneX {
                 display: none;
 
