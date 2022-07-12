@@ -66,5 +66,18 @@ window.addEventListener("DOMContentLoaded", () => {
         burger.classList.toggle("nav__hamburger_active");
         navMob.classList.toggle("nav__items__mob_active");
     });
-    
+
+
+    // Аккордеон
+    let btns = document.querySelectorAll(".prices__accordion-header");
+
+    btns.forEach(btn => {
+        btn.addEventListener("click", function () {
+            this.classList.remove("prices__accordion-header");
+            this.classList.add("prices__accordion-header__active");
+            this.nextElementSibling.classList.remove("prices__accordion-block");
+            this.nextElementSibling.classList.add("prices__accordion-block__active");
+            this.nextElementSibling.style.maxHeight = this.nextElementSibling.scrollHeight + "px";
+        });
+    });
 });

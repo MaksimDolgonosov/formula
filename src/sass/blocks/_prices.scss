@@ -20,7 +20,6 @@
         &-header {
             display: block;
 
-
             span {
                 font-size: 24px;
                 font-weight: 300;
@@ -61,41 +60,62 @@
                 border-top: $main_color;
                 border-right: $main_color;
             }
+
+            // &__active {
+            //     span {
+            //         &::after {
+            //             transform: rotate(-45deg);
+            //         }
+            //     }
+            // }
         }
 
         &-block {
-            ul {
-                list-style-type: none;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
 
-                .serviceName {
-                    line-height: 45px;
-                    font-weight: 300;
-                    
+            &__active {
+                opacity: 1;
+                overflow: visible;
+
+
+                ul {
+                    list-style-type: none;
+
+                    .serviceName {
+                        line-height: 45px;
+                        font-weight: 300;
+
+                    }
+
+                    .priceName {
+                        line-height: 45px;
+                        font-weight: 300;
+                    }
+
+                    li {
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        display: flex;
+                        justify-content: space-between;
+                        border-bottom-color: rgb(216, 216, 216);
+                        border-bottom-style: solid;
+                        border-bottom-width: 1px;
+                        font-size: 18px;
+                        font-weight: 300;
+                        line-height: 35px;
+                    }
                 }
 
-                .priceName {
-                    line-height: 45px;
-                    font-weight: 300;
-                }
 
-                li {
-                    padding-left: 15px;
-                    padding-right: 15px;
+
+                &-header {
+
                     display: flex;
-                    justify-content: space-between;
-                    border-bottom-color: rgb(216, 216, 216);
-                    border-bottom-style: solid;
-                    border-bottom-width: 1px;
-                    font-size: 18px;
-                    font-weight: 300;
-                    line-height: 35px;
+                    background-color: $main-color;
                 }
-            }
-
-            &-header {
-
-                display: flex;
-                background-color: $main-color;
             }
         }
     }
