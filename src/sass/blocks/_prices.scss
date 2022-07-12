@@ -1,0 +1,102 @@
+.prices {
+    &__title {
+        font-size: 30px;
+        font-weight: 600;
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    &__line {
+        width: 80px;
+        height: 4px;
+        background-color: $main_color_dark;
+        margin: 0 auto;
+        border-radius: 30px;
+    }
+
+    &__accordion {
+        padding: 35px 90px 35px 90px;
+
+        &-header {
+            display: block;
+
+
+            span {
+                font-size: 24px;
+                font-weight: 300;
+                line-height: 45px;
+                position: relative;
+                display: block;
+                border-bottom-color: rgb(216, 216, 216);
+                border-bottom-style: solid;
+                border-bottom-width: 1px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    border-top: 2px solid #bba788;
+                    border-right: 2px solid #bba788;
+                    transform: rotate(135deg);
+                    top: 13px;
+                    right: 10px;
+                }
+
+                &:hover {
+                    color: $main_color;
+                    cursor: pointer;
+
+                    &::after {
+                        border-top: 2px solid $main_color;
+                        border-right: 2px solid $main_color;
+                    }
+                }
+
+            }
+
+            &:hover {
+                color: $main_color;
+                cursor: pointer;
+                border-top: $main_color;
+                border-right: $main_color;
+            }
+        }
+
+        &-block {
+            ul {
+                list-style-type: none;
+
+                .serviceName {
+                    line-height: 45px;
+                    font-weight: 300;
+                    
+                }
+
+                .priceName {
+                    line-height: 45px;
+                    font-weight: 300;
+                }
+
+                li {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom-color: rgb(216, 216, 216);
+                    border-bottom-style: solid;
+                    border-bottom-width: 1px;
+                    font-size: 18px;
+                    font-weight: 300;
+                    line-height: 35px;
+                }
+            }
+
+            &-header {
+
+                display: flex;
+                background-color: $main-color;
+            }
+        }
+    }
+}
