@@ -256,6 +256,26 @@
         }
     }
 
+    .prices {
+        &__title {
+            padding-top: 70px;
+
+        }
+
+        &__descr {
+            padding: 35px 20px 0px 20px;
+
+            p {
+                font-size: 17px;
+
+            }
+        }
+
+        &__accordion {
+            padding: 35px 20px 35px 20px;
+        }
+    }
+
 }
 
 @media(max-width: 576px) {
@@ -506,7 +526,7 @@
 @media(max-width: 415px) {
     .container {
         width: 100%;
-        padding: 0 10px;
+        padding: 0 7px;
     }
 
     .contacts {
@@ -529,6 +549,24 @@
                 width: 100%;
                 display: block;
 
+            }
+        }
+    }
+    .prices {
+
+        &__accordion {
+            padding: 35px 5px 35px 5px;
+            &-header {
+                span {
+                    font-size: 21px;
+                }
+
+                &__active {
+                    span {
+                        font-size: 21px;
+                    }
+
+                }
             }
         }
     }
@@ -563,6 +601,7 @@
             }
         }
     }
+
 }
 
 @media(max-width: 376px) {
@@ -594,12 +633,35 @@
             }
         }
     }
+
+    .prices {
+        &__descr {
+            padding: 25px 0px 0px 0px;
+        }
+
+        &__accordion {
+            padding: 35px 0px 35px 0px;
+
+            &-header {
+                span {
+                    font-size: 19px;
+                }
+
+                &__active {
+                    span {
+                        font-size: 19px;
+                    }
+
+                }
+            }
+        }
+    }
 }
 
 @media(max-width: 321px) {
     .container {
         width: 100%;
-        padding: 0 10px;
+        padding: 0 4px;
     }
 
     .contacts {
@@ -622,6 +684,60 @@
             &-iphoneX {
                 display: none;
 
+            }
+        }
+    }
+
+    .prices {
+        &__descr {
+            padding: 25px 0px 0px 0px;
+            p {
+                font-size: 17px;
+                margin-bottom: 0;
+            }
+            span {
+                font-size: 15px;
+    
+            }
+        }
+
+        &__accordion {
+            padding: 25px 0px 25px 0px;
+
+            &-header {
+                span {
+                    font-size: 17px;
+
+                    &::after {
+
+                        right: 5px;
+
+                    }
+                }
+
+                &__active {
+                    span {
+                        font-size: 17px;
+
+                        &::after {
+                            top: 18px;
+                            right: 5px;
+
+                        }
+                    }
+
+                }
+            }
+
+            &-block {
+                &__active {
+
+                    ul {
+                        li {
+                            font-size: 16px;
+                        }
+                    }
+                }
             }
         }
     }

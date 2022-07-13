@@ -103,8 +103,9 @@
                         border-top: 2px solid $main_color;
                         border-right: 2px solid $main_color;
                         transform: rotate(-45deg);
-                        top: 13px;
+                        top: 20px;
                         right: 10px;
+                        transition: all .3s ease-out;
                     }
 
                     &:hover {
