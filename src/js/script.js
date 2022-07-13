@@ -91,8 +91,8 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     // Слайдер Наши работы
-     // Слайдер "О нас"
-     try {
+    // Слайдер "парикмахеры"
+    try {
         let slider = tns({
             container: '.inner__hairs',
             controls: false,
@@ -103,13 +103,66 @@ window.addEventListener("DOMContentLoaded", () => {
             speed: 900,
             nav: false,
             gutter: 15
-            
+
         });
-        document.querySelector('.prev').addEventListener("click", function () {
+        document.querySelector('.prev-hairs').addEventListener("click", function () {
             slider.goTo("prev");
         });
-        document.querySelector('.next').addEventListener("click", function () {
+        document.querySelector('.next-hairs').addEventListener("click", function () {
             slider.goTo("next");
         });
     } catch (e) { }
+
+    // Слайдер "маникюр"
+    try {
+        let slider = tns({
+            container: '.inner__nails',
+            controls: false,
+            items: 4,
+            slideBy: 'page',
+            autoplay: false,
+            autoplayButtonOutput: false,
+            speed: 900,
+            nav: false,
+            gutter: 15
+
+        });
+        document.querySelector('.prev-nails').addEventListener("click", function () {
+            slider.goTo("prev");
+        });
+        document.querySelector('.next-nails').addEventListener("click", function () {
+            slider.goTo("next");
+        });
+    } catch (e) { }
+
+    // Картинка в полный размер
+    const workClass = document.querySelector(".works");
+    const imgDiv = document.createElement("div");
+    const bigImg = document.createElement("img");
+
+    workClass.appendChild(imgDiv);
+    imgDiv.classList.add("popup");
+
+    imgDiv.style.justifyContent = "center";
+    imgDiv.style.alignItems = "center";
+    imgDiv.style.display = "none";
+    imgDiv.appendChild(bigImg);
+
+    workClass.addEventListener("click", e => {
+        e.preventDefault();
+        console.log(e.target.parentNode.parentNode);
+        if (e.target && e.target.parentNode.parentNode.classList.contains("works__img")) {
+            imgDiv.style.display = "flex";
+            document.body.style.overflow = "hidden";
+            const srcImage = e.target.parentNode.getAttribute('href');
+            bigImg.setAttribute("src", srcImage);
+
+        }
+        if (e.target && e.target.classList.contains("popup")) {
+            imgDiv.style.display = "none";
+            document.body.style.overflow = "";
+        }
+    });
+
+
 });
