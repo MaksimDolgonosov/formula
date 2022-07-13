@@ -14,11 +14,26 @@
         border-radius: 30px;
     }
 
+    &__descr {
+        padding: 35px 50px 0px 50px;
+
+        p {
+            font-size: 19px;
+            margin-bottom: 0;
+        }
+
+        span {
+            font-size: 16px;
+
+        }
+    }
+
     &__accordion {
         padding: 35px 90px 35px 90px;
 
         &-header {
-            display: block;
+
+            transition: all .3s ease-out;
 
             span {
                 font-size: 24px;
@@ -33,6 +48,7 @@
                 &::after {
                     content: "";
                     position: absolute;
+                    display: block;
                     width: 15px;
                     height: 15px;
                     border-top: 2px solid #bba788;
@@ -40,11 +56,13 @@
                     transform: rotate(135deg);
                     top: 13px;
                     right: 10px;
+                    transition: all .3s ease-out;
                 }
 
                 &:hover {
                     color: $main_color;
                     cursor: pointer;
+                    transition: all .3s ease-out;
 
                     &::after {
                         border-top: 2px solid $main_color;
@@ -61,17 +79,58 @@
                 border-right: $main_color;
             }
 
-            // &__active {
-            //     span {
-            //         &::after {
-            //             transform: rotate(-45deg);
-            //         }
-            //     }
-            // }
+            &__active {
+                display: block;
+                transition: all .3s ease-out;
+
+                span {
+                    color: $main_color;
+                    font-size: 24px;
+                    font-weight: 300;
+                    line-height: 45px;
+                    position: relative;
+                    display: block;
+                    border-bottom-color: rgb(216, 216, 216);
+                    border-bottom-style: solid;
+                    border-bottom-width: 1px;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 15px;
+                        height: 15px;
+                        border-top: 2px solid $main_color;
+                        border-right: 2px solid $main_color;
+                        transform: rotate(-45deg);
+                        top: 13px;
+                        right: 10px;
+                    }
+
+                    &:hover {
+                        color: $main_color;
+                        cursor: pointer;
+                        transition: all .3s ease-out;
+
+                        &::after {
+                            border-top: 2px solid $main_color;
+                            border-right: 2px solid $main_color;
+                        }
+                    }
+
+                }
+
+                &:hover {
+                    color: $main_color;
+                    cursor: pointer;
+                    border-top: $main_color;
+                    border-right: $main_color;
+                }
+            }
         }
 
         &-block {
-            max-height: 0;
+            // max-height: 0;
             opacity: 0;
             overflow: hidden;
             transition: all 0.3s ease-out;
@@ -79,7 +138,7 @@
             &__active {
                 opacity: 1;
                 overflow: visible;
-
+                transition: all 0.3s ease-out;
 
                 ul {
                     list-style-type: none;
@@ -109,9 +168,7 @@
                     }
                 }
 
-
-
-                &-header {
+                .prices__accordion-block-header {
 
                     display: flex;
                     background-color: $main-color;

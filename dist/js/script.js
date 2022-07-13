@@ -73,11 +73,20 @@ window.addEventListener("DOMContentLoaded", () => {
 
     btns.forEach(btn => {
         btn.addEventListener("click", function () {
-            this.classList.remove("prices__accordion-header");
-            this.classList.add("prices__accordion-header__active");
-            this.nextElementSibling.classList.remove("prices__accordion-block");
-            this.nextElementSibling.classList.add("prices__accordion-block__active");
-            this.nextElementSibling.style.maxHeight = this.nextElementSibling.scrollHeight + "px";
+            if (this.classList.contains("prices__accordion-header")) {
+                this.classList.remove("prices__accordion-header");
+                this.classList.add("prices__accordion-header__active");
+                this.nextElementSibling.classList.remove("prices__accordion-block");
+                this.nextElementSibling.classList.add("prices__accordion-block__active");
+                this.nextElementSibling.style.maxHeight = this.nextElementSibling.scrollHeight + "px";
+            } else {
+                this.classList.remove("prices__accordion-header__active");
+                this.classList.add("prices__accordion-header");
+                this.nextElementSibling.classList.remove("prices__accordion-block__active");
+                this.nextElementSibling.classList.add("prices__accordion-block");
+                this.nextElementSibling.style.maxHeight = "0px";
+            }
+
         });
     });
 });
