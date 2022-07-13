@@ -89,4 +89,27 @@ window.addEventListener("DOMContentLoaded", () => {
 
         });
     });
+
+    // Слайдер Наши работы
+     // Слайдер "О нас"
+     try {
+        let slider = tns({
+            container: '.inner__hairs',
+            controls: false,
+            items: 4,
+            slideBy: 'page',
+            autoplay: false,
+            autoplayButtonOutput: false,
+            speed: 900,
+            nav: false,
+            gutter: 15
+            
+        });
+        document.querySelector('.prev').addEventListener("click", function () {
+            slider.goTo("prev");
+        });
+        document.querySelector('.next').addEventListener("click", function () {
+            slider.goTo("next");
+        });
+    } catch (e) { }
 });
