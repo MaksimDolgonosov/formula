@@ -310,5 +310,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
     } catch (e) { }
 
+    // Сортировка мастеров 
+    try {
+        const allMasters = document.querySelector(".allMasters");
+        const hairMasters = document.querySelector(".hairMasters");
+        const nailMasters = document.querySelector(".nailMasters");
+        const allItems = document.querySelectorAll(".masters__wrapper-item");
+
+
+    } catch (e) { }
 
 });
