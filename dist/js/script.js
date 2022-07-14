@@ -91,78 +91,225 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     // Слайдер Наши работы
-    // Слайдер "парикмахеры"
-    try {
-        let slider = tns({
-            container: '.inner__hairs',
-            controls: false,
-            items: 4,
-            slideBy: 'page',
-            autoplay: false,
-            autoplayButtonOutput: false,
-            speed: 900,
-            nav: false,
-            gutter: 15
 
-        });
-        document.querySelector('.prev-hairs').addEventListener("click", function () {
-            slider.goTo("prev");
-        });
-        document.querySelector('.next-hairs').addEventListener("click", function () {
-            slider.goTo("next");
-        });
-    } catch (e) { }
+    console.log(window.innerWidth);
+    if (window.innerWidth > 992) {
+        // Слайдер "парикмахеры"
+        try {
+            let slider = tns({
+                container: '.inner__hairs',
+                controls: false,
+                items: 4,
+                slideBy: 'page',
+                autoplay: false,
+                autoplayButtonOutput: false,
+                speed: 900,
+                nav: false,
+                gutter: 15
 
-    // Слайдер "маникюр"
-    try {
-        let slider = tns({
-            container: '.inner__nails',
-            controls: false,
-            items: 4,
-            slideBy: 'page',
-            autoplay: false,
-            autoplayButtonOutput: false,
-            speed: 900,
-            nav: false,
-            gutter: 15
+            });
+            document.querySelector('.prev-hairs').addEventListener("click", function () {
+                slider.goTo("prev");
+            });
+            document.querySelector('.next-hairs').addEventListener("click", function () {
+                slider.goTo("next");
+            });
+        } catch (e) { }
 
-        });
-        document.querySelector('.prev-nails').addEventListener("click", function () {
-            slider.goTo("prev");
-        });
-        document.querySelector('.next-nails').addEventListener("click", function () {
-            slider.goTo("next");
-        });
-    } catch (e) { }
+        // Слайдер "маникюр"
+        try {
+            let slider = tns({
+                container: '.inner__nails',
+                controls: false,
+                items: 4,
+                slideBy: 'page',
+                autoplay: false,
+                autoplayButtonOutput: false,
+                speed: 900,
+                nav: false,
+                gutter: 15
+
+            });
+            document.querySelector('.prev-nails').addEventListener("click", function () {
+                slider.goTo("prev");
+            });
+            document.querySelector('.next-nails').addEventListener("click", function () {
+                slider.goTo("next");
+            });
+        } catch (e) { }
+
+    } else if (window.innerWidth < 993 && window.innerWidth > 768) {
+
+        // Слайдер "парикмахеры"
+        try {
+            let slider = tns({
+                container: '.inner__hairs',
+                controls: false,
+                items: 3,
+                slideBy: 'page',
+                autoplay: false,
+                autoplayButtonOutput: false,
+                speed: 900,
+                nav: false,
+                gutter: 15
+
+            });
+            document.querySelector('.prev-hairs').addEventListener("click", function () {
+                slider.goTo("prev");
+            });
+            document.querySelector('.next-hairs').addEventListener("click", function () {
+                slider.goTo("next");
+            });
+        } catch (e) { }
+
+        // Слайдер "маникюр"
+        try {
+            let slider = tns({
+                container: '.inner__nails',
+                controls: false,
+                items: 3,
+                slideBy: 'page',
+                autoplay: false,
+                autoplayButtonOutput: false,
+                speed: 900,
+                nav: false,
+                gutter: 15
+
+            });
+            document.querySelector('.prev-nails').addEventListener("click", function () {
+                slider.goTo("prev");
+            });
+            document.querySelector('.next-nails').addEventListener("click", function () {
+                slider.goTo("next");
+            });
+        } catch (e) { }
+
+    } else if (window.innerWidth < 769 && window.innerWidth > 576) {
+        // Слайдер "парикмахеры"
+        try {
+            let slider = tns({
+                container: '.inner__hairs',
+                controls: false,
+                items: 2,
+                slideBy: 'page',
+                autoplay: false,
+                autoplayButtonOutput: false,
+                speed: 900,
+                nav: false,
+                gutter: 15
+
+            });
+            document.querySelector('.prev-hairs').addEventListener("click", function () {
+                slider.goTo("prev");
+            });
+            document.querySelector('.next-hairs').addEventListener("click", function () {
+                slider.goTo("next");
+            });
+        } catch (e) { }
+
+        // Слайдер "маникюр"
+        try {
+            let slider = tns({
+                container: '.inner__nails',
+                controls: false,
+                items: 2,
+                slideBy: 'page',
+                autoplay: false,
+                autoplayButtonOutput: false,
+                speed: 900,
+                nav: false,
+                gutter: 15
+
+            });
+            document.querySelector('.prev-nails').addEventListener("click", function () {
+                slider.goTo("prev");
+            });
+            document.querySelector('.next-nails').addEventListener("click", function () {
+                slider.goTo("next");
+            });
+        } catch (e) { }
+    } else if (window.innerWidth < 577) {
+        try {
+            let slider = tns({
+                container: '.inner__hairs',
+                controls: false,
+                items: 1,
+                slideBy: 'page',
+                autoplay: false,
+                autoplayButtonOutput: false,
+                speed: 900,
+                nav: false,
+                gutter: 15
+
+            });
+            document.querySelector('.prev-hairs').addEventListener("click", function () {
+                slider.goTo("prev");
+            });
+            document.querySelector('.next-hairs').addEventListener("click", function () {
+                slider.goTo("next");
+            });
+        } catch (e) { }
+
+        // Слайдер "маникюр"
+        try {
+            let slider = tns({
+                container: '.inner__nails',
+                controls: false,
+                items: 1,
+                slideBy: 'page',
+                autoplay: false,
+                autoplayButtonOutput: false,
+                speed: 900,
+                nav: false,
+                gutter: 15
+
+            });
+            document.querySelector('.prev-nails').addEventListener("click", function () {
+                slider.goTo("prev");
+            });
+            document.querySelector('.next-nails').addEventListener("click", function () {
+                slider.goTo("next");
+            });
+        } catch (e) { }
+    }
+
+
 
     // Картинка в полный размер
-    const workClass = document.querySelector(".works");
-    const imgDiv = document.createElement("div");
-    const bigImg = document.createElement("img");
+    try {
+        const workClass = document.querySelector(".works");
+        const imgDiv = document.createElement("div");
+        const bigImg = document.createElement("img");
 
-    workClass.appendChild(imgDiv);
-    imgDiv.classList.add("popup");
+        workClass.appendChild(imgDiv);
+        imgDiv.classList.add("popup");
 
-    imgDiv.style.justifyContent = "center";
-    imgDiv.style.alignItems = "center";
-    imgDiv.style.display = "none";
-    imgDiv.appendChild(bigImg);
+        imgDiv.style.justifyContent = "center";
+        imgDiv.style.alignItems = "center";
+        imgDiv.style.display = "none";
+        imgDiv.appendChild(bigImg);
 
-    workClass.addEventListener("click", e => {
-        e.preventDefault();
-        console.log(e.target.parentNode.parentNode);
-        if (e.target && e.target.parentNode.parentNode.classList.contains("works__img")) {
-            imgDiv.style.display = "flex";
-            document.body.style.overflow = "hidden";
-            const srcImage = e.target.parentNode.getAttribute('href');
-            bigImg.setAttribute("src", srcImage);
+        workClass.addEventListener("click", e => {
+            e.preventDefault();
+            console.log(e.target.parentNode.parentNode);
+            if (e.target && e.target.parentNode.parentNode.classList.contains("works__img")) {
+                imgDiv.style.display = "flex";
+                document.body.style.overflow = "hidden";
+                const srcImage = e.target.parentNode.getAttribute('href');
+                bigImg.setAttribute("src", srcImage);
+                if (window.innerWidth < 605) {
+                    bigImg.style.width = "100vw";
+                }
 
-        }
-        if (e.target && e.target.classList.contains("popup")) {
-            imgDiv.style.display = "none";
-            document.body.style.overflow = "";
-        }
-    });
+
+            }
+            if (e.target && e.target.classList.contains("popup")) {
+                imgDiv.style.display = "none";
+                document.body.style.overflow = "";
+            }
+        });
+
+    } catch (e) { }
 
 
 });
