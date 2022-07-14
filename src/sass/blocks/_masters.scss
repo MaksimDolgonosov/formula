@@ -1,0 +1,87 @@
+.masters {
+    &__title {
+        font-size: 30px;
+        font-weight: 600;
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    &__line {
+        width: 80px;
+        height: 4px;
+        background-color: $main_color_dark;
+        margin: 0 auto;
+        border-radius: 30px;
+    }
+
+    &__descr {
+        padding: 35px 50px 0px 50px;
+
+        p {
+            font-size: 19px;
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__choise {
+        padding: 35px 50px 35px 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        button {
+            width: 270px;
+            height: 52px;
+            border: 2px solid $main_color;
+            border-radius: 30px;
+            background-color: $second-color;
+            color: white;
+            font-size: 18px;
+            // font-style: italic;
+            transition: all .3s;
+
+            &:hover {
+
+                box-shadow: 0px 0px 10px 5px $main_color;
+            }
+        }
+    }
+
+    &__wrapper {
+        padding: 15px 50px 35px 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 168px);
+        grid-template-rows: repeat(3, 272px);
+        column-gap: 15px;
+        row-gap: 15px;
+        grid-auto-rows: auto;
+        justify-content: center;
+        // display: flex;
+        // justify-content: start;
+        // align-items: center;
+        // flex-wrap: wrap;
+
+        &-item {
+            border: 2px solid $main_color;
+            // margin: 16px;
+
+            img {
+                width: 100%;
+                
+                border-bottom: 1px solid $main_color;
+            }
+        }
+
+        &-name {
+            padding-top: 6px;
+            padding-bottom: 6px;
+            font-size: 20px;
+            text-align: center;
+            background-color: $main_color;
+            font-style: italic;
+            // width: 168px;
+        }
+    }
+
+}

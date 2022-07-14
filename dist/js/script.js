@@ -92,7 +92,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // Слайдер Наши работы
 
-    console.log(window.innerWidth);
     if (window.innerWidth > 992) {
         // Слайдер "парикмахеры"
         try {
