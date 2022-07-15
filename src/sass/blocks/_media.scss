@@ -666,6 +666,9 @@
     }
 
     .contacts {
+        &__padding {
+            padding-top: 35px;
+        }
         &__title {
             font-size: 25px;
 

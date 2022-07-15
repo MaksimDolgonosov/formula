@@ -312,11 +312,32 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // Сортировка мастеров 
     try {
+        const allBtns = document.querySelectorAll(".masters__choise button");
         const allMasters = document.querySelector(".allMasters");
         const hairMasters = document.querySelector(".hairMasters");
         const nailMasters = document.querySelector(".nailMasters");
         const allItems = document.querySelectorAll(".masters__wrapper-item");
+        const hairItems = document.querySelectorAll('[data-master="hair"]');
+        const nailItems = document.querySelectorAll('[data-master="nail"]');
 
+
+        allMasters.addEventListener("click", () => {
+            allBtns.forEach(btn => btn.classList.remove("active"));
+            allMasters.classList.add("active");
+            allItems.forEach(item => item.style.display = "block");
+        });
+        hairMasters.addEventListener("click", () => {
+            allBtns.forEach(btn => btn.classList.remove("active"));
+            hairMasters.classList.add("active");
+            allItems.forEach(item => item.style.display = "none");
+            hairItems.forEach(item => item.style.display = "block");
+        });
+        nailMasters.addEventListener("click", () => {
+            allBtns.forEach(btn => btn.classList.remove("active"));
+            nailMasters.classList.add("active");
+            allItems.forEach(item => item.style.display = "none");
+            nailItems.forEach(item => item.style.display = "block");
+        });
 
     } catch (e) { }
 
