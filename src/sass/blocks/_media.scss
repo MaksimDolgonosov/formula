@@ -495,6 +495,7 @@
             }
 
         }
+
         &__wrapper {
             padding: 15px 10px 35px 10px;
         }
@@ -630,7 +631,7 @@
 
 
                 .tns-nav {
-                    bottom: 10px;
+                    bottom: -130px;
                 }
 
                 img {
@@ -669,6 +670,7 @@
         &__padding {
             padding-top: 35px;
         }
+
         &__title {
             font-size: 25px;
 
@@ -742,6 +744,10 @@
     }
 
     .services {
+        &__title {
+            padding-top: 70px;
+        }
+
         &__descr {
             font-size: 18px;
             padding: 30px 10px 0 10px;
@@ -865,6 +871,7 @@
 
             }
         }
+
         &__wrapper {
             padding: 15px 0px 35px 0px;
         }
@@ -899,6 +906,44 @@
                 display: block;
 
             }
+        }
+    }
+
+    .about {
+        &__title {
+            font-size: 20px;
+        }
+
+        &__wrapper {
+            min-height: 600px;
+
+            &-text {
+
+                padding-right: 0px;
+                font-size: 16px;
+            }
+
+            &-slider {
+                width: 350px;
+                height: 200px;
+
+                .tns-nav {
+                    bottom: -10px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .feedback {
+        &__title {
+            padding-top: 75px;
+
         }
     }
 
