@@ -1,4 +1,8 @@
 .prices {
+    .container {
+        min-height: 725px;
+    }
+    
     &__title {
         font-size: 30px;
         font-weight: 600;
